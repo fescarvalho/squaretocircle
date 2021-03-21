@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: #000000;
+    display: grid;
+    place-items: center;
+  }
+  
+  .square-to-circle {
+    width: 150px;
+    height: 150px;
+    animation: square-to-circle 2s 1s infinite cubic-bezier(1,.015,.295,1.225)alternate;
+  }
+  
+  @keyframes square-to-circle {
+    0%{
+      transform: rotate(0deg);
+      border-radius: 0;
+      background: #b8cd80;
+      }
+    25%{
+      transform: rotate(45deg);
+      border-radius: 50% 0 0 0;
+      background: #7c9861;
+    }
+    
+    50%{
+      transform: rotate(90deg);
+      border-radius:50% 50% 0 0;
+      background: #496a4b;
+    }
+    
+    75%{
+      transform: rotate(135deg);
+      border-radius: 50% 50% 50% 0;
+      background: #284833;
+    }
+    100%{
+      transform: rotate(180deg);
+      border-radius: 50%;
+      background: #0e2e21;
+    }
+    
+  }
